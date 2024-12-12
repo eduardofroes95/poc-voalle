@@ -37,8 +37,7 @@ describe('Estes testes possuem o objetivo de validar a página de contato', () =
         const textosEua = ['Name', 'Corporate email', 'Telephone', 'Enterprise', 'Position in the company', 'Company segment', 'Your message']
 
         it('Validando elementos na página', () => {
-            cy.visit('/')
-            cy.get('.ekit-menu-nav-link:contains("Contato")').click();
+            cy.visit('/Contato')
             cy.get('a[data-gt-lang="en"]').click()
             cy.url().should('eq', 'https://grupovoalle.com.br/contato/');
             cy.get('.aux-widget-inner:contains("Entre em contato agora!")').should('be.visible')
@@ -67,8 +66,7 @@ describe('Estes testes possuem o objetivo de validar a página de contato', () =
         const textosEsp = ['Nombre', 'Correo electrónico corporativo', 'Teléfono', 'Empresa', 'Puesto en la empresa', 'Segmento de empresa', 'Tu mensaje']
 
         it('Validando elementos na página', () => {
-            cy.visit('/')
-            cy.get('.ekit-menu-nav-link:contains("Contato")').click();
+            cy.visit('/Contato')
             cy.get('a[data-gt-lang="es"]').click()
             cy.url().should('eq', 'https://grupovoalle.com.br/contato/');
             cy.get('.aux-widget-inner:contains("Entre em contato agora!")').should('be.visible')
